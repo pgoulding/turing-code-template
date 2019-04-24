@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Check Yo Self</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header class="flex">
+  <h1>CHECK<span> YO' </span>SELF</h1>
+  <div class="flex search-container">
+    <img src="images/search.svg" class="btn__icon-search">
+    <input id="input-search" class="header__input-searchbar form__input" placeholder="search">
+  </div>
+</header>
+<aside>
+  <form class="flex">
+    <label for="input-title">Task Title</label>
+    <input id="input-title" class="form__input" placeholder="A New Task Title">
+    <section>
+      <ul class="form__task-container">
+      </ul>
+    </section>
+    <label for="input-item" class="block">Task Item</label>
+    <div class="flex">
+      <input id="input-item" class="form__input form__input-task" placeholder="Type in a new item"><button id="add-task-icon" class="form__task-icon">+</button>
+    </div>
+    <button id="btn-make-task" type="submit" class="form__input form__input-create">Make Task List</button>
+    <button id="btn-clear" class="form__input form__input-clear">Clear All</button>
+  </form>
+  <form class="flex form__container-filter">
+    <button id="btn-filter-urgent" class="form__input form__input-filter">Filter by Urgency</button>
+  </form>
+</aside>
+<main class="masonry-layout">
+  <h3 class="no-ideas">No Lists yet, why don't you add one!</h3>
+  <template>
+    <article class="card card__task-container">
+      <section class="card__task-top">
+        <h3 class="card-title">Task Title</h3>
+      </section>
+      <div class="card__task-list">
+        <label class="task-checkbox">
+          <input type="checkbox">
+          <img src="images/checkbox.svg" class="card__task-ico">
+        </label>
+      </div>
+      <section class="card__task-modify flex">
+        <div class="bottom__task-icon flex bottom__container-urgent">
+            <input type="image" src="images/urgent.svg" class="task-modifiers card__task-ico card__task-urgent" alt="Mark as urgent">
+            URGENT</input>
+        </div>
+        <div class="bottom__task-icon flex">
+            <input type="image" src="images/delete.svg" class="task-modifiers card__task-ico card__task-delete" alt="delete task"> DELETE</input>
+        </div>
+      </section>
+    </article>
+  </template>
+</main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript" src="todo-list.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>

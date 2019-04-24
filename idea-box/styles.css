@@ -1,0 +1,306 @@
+/*---------- Body ------------------*/
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  'aside form'
+  'aside article';
+}
+
+.flex {
+  display: flex;
+}
+
+.no-outline{
+ outline: 0;
+ border: none; 
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: #D14119;
+}
+
+button:disabled{
+  opacity: .5;
+  cursor: default;
+}
+
+.hidden {
+  display: none;
+}
+
+/*---------- Aside -------------------*/
+aside {
+  background-color: #1f1f3d;
+  color: #fff;
+  font-size: 1em;
+  grid-area: aside;
+  min-width: 200px;
+}
+
+aside section {
+  border-bottom: 1px solid #353567;
+  height: 120px;
+  margin-left: 10px;
+}
+aside h1 {
+  border-bottom: 1px solid #353567;
+  font-size: 1.2em;
+  padding: 20px 0px 20px 10px;
+  margin: 0;
+}
+
+h3 {
+  margin: 10px 0px 30px 0px;
+}
+
+ul {
+  list-style: none;
+  flex-direction: column;
+  margin: 0 -10px;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  border-left: 5px solid #1f1f3d;
+  font-size: 1em;
+  width: 105%;
+  height: 30px;
+  padding: 5px;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #D14119;
+  border-left: 5px solid #f58e72
+}
+
+.header-container{
+  flex-direction: column;
+}
+
+#hamburger-menu{
+  display: none;
+}
+
+.show-button-conatiner,
+.aside-form {
+  border-bottom: 1px solid #353567;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.aside-form label {
+  margin: 30px 0px 0px 0px;
+}
+
+.aside-form input {
+  width: 90%;
+  margin: 10px 0px 20px 0px;
+  height: 50px;
+}
+
+.aside-small-titles {
+  color:#bfbfdd;
+  font-size: .8em;
+}
+
+.aside-button {
+  background-color: #5356a4;
+  border: 1px solid #353567;
+  color: #e9e9f3;
+  border-radius: 3px;
+  height: 50px;
+  width: 90%;
+  margin:10px 0;
+}
+
+/*---------- Form ----------------*/
+.main-form {
+  background-color: #A9AAD2;
+  grid-area: form;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-form form {
+  flex-direction: column;
+  width: 50%;
+  margin: 30px 0px;
+}
+
+.main-form button {
+  background-color: #363567;
+  margin: 0px 0px 20px 0px;
+  color: white;
+  height: 50px;
+  outline: none;
+  border: none;
+}
+
+.main-form input {
+  height: 50px;
+}
+
+.main-form-input {
+  border: solid 2px #5355A5;
+  border-radius: 3px;
+}
+
+.main-form-title-input {
+  margin: 10px 0px 20px 0px;
+}
+
+.main-form-search-input {
+  background: url('images/search.svg') no-repeat #fff;
+  background-position-x: -10px;
+  background-position-y: center;
+  background-size: 70px;
+  padding-left: 60px;
+}
+
+.main-form-body-input {
+  margin: 10px 0px 20px 0px;
+  height: 150px;
+  resize: none;
+}
+
+/*---------- Main ---------------*/
+
+main {
+  grid-area: article;
+  background-color: #eaeaf4;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+img{
+  width: 30px;
+}
+
+.card {
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #5355A5;
+  margin: 10px;
+  width: 300px;
+  height: 400px;
+}
+
+.card-top {
+  background-color: #1F1F3D;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.card-middle {
+  flex: 6;
+  padding: 10px;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.card-middle h2 {
+  font-size: 1em;
+}
+
+.card-bottom {
+  background-color: #5355A5;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.card-bottom p {
+  margin: 0;
+  color: white;
+  align-self: center;
+}
+
+.star-icon {
+  height: 30px;
+  width: 30px;
+  fill: white;
+  margin: 0px 0px 0px 4px;
+}
+
+.card-bottom-icon-upvote:hover, active {
+  cursor: pointer;
+}
+
+.card-bottom-icon-downvote:hover, active {
+  cursor: pointer;
+}
+
+.star-color:hover, active {
+  fill: orange;
+  cursor: pointer;
+}
+
+.card-top-icon-remove:hover {
+  cursor: pointer;
+}
+
+
+/*---------- Media Queries ---------*/
+/*---- Typical Tablet Size ---------*/
+@media screen and (max-width: 879px) {
+  main {
+    justify-content: space-around;
+  }
+
+  .main-form form {
+    width: 80%;
+  }
+}
+
+/*---- Large Phones ----------------*/
+@media screen and (max-width: 440px) {
+  body {
+    display: block;
+  }
+
+  .aside-article {
+    display: none;
+  }
+
+  #hamburger-menu{
+    display: initial;
+  }
+
+  .header-container{
+    flex-direction: row;
+    height: 65px;
+  }
+
+  aside h1 {
+    text-align: center;
+  }
+
+  .card {
+    height: 200px;
+    width:100%;
+    margin: 10px 0;
+  }
+
+  .main-form form {
+    width: 90%;
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ideabox redux with Patrick, Ebenezer, and Steve</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <aside>
+    <div class="header-container flex">
+      <img src="images/menu.svg" id="hamburger-menu" class="menu-toggle">
+      <h1>IdeaBox Redux</h1>
+    </div>
+  <article class="aside-article">
+    <section>
+      <h3 class="aside-small-titles">Filter Starred Ideas</h3>
+      <button class="aside-button" id="show-starred-ideas">Show Starred Ideas</button>
+    </section>
+    <form class="aside-form flex">
+      <h3 class="aside-small-titles">Filter by Quality</h3>
+      <ul class="flex quality-list">
+        <li value="0" id="quality-select-0">Swill</li>
+        <li value="1" id="quality-select-1">Plausible</li>
+        <li value="2" id="quality-select-2">Genius</li>
+      </ul>
+      <button class="aside-button" id="show-all-qualities" type="submit">Show All Qualities</button>
+      <label for="new-quality" class="aside-small-titles">New Quality</label>
+      <input name="new-quality" type="text" id="custom-quality-input" class="no-outline main-form-input">
+      <button class="aside-button" id="add-new-quality">Add New Quality</button>
+    </form>
+    <div class="show-button-conatiner">
+      <button class="aside-button" id="show-button">Show More</button>
+    </div>
+  </article>
+  </aside>
+  <article class="main-form flex">
+    <form class="card-add-form flex">
+      <label class="header-label">  Title</label>
+      <input class="main-form-title-input no-outline main-form-input" type="text" id="idea-title-input">
+      <label class="header-label">  Body</label>
+      <textarea class="main-form-body-input no-outline main-form-input" id="idea-body-input"></textarea>
+      <button id="idea-btn-save" class="no-outline"disabled=""> Save</button>
+      <input class="main-form-search-input no-outline main-form-input" type="search" placeholder="Search Ideas" id="idea-search-input">
+    </form>
+  </article>
+  <main class="flex">
+    <h5 class="main-no-idea-display toggle">No ideas yet? Add one!</h5>
+    <template>
+      <article class="card flex">
+        <section class="flex card-top">
+          <img class="star-icon" src="images/star.svg">
+          <img class="card-top-icon-remove" src="images/delete.svg">
+        </section>
+        <section class="card-middle flex">
+          <h2 contenteditable="true" class="card-title no-outline">Idea Title</h2>
+          <p contenteditable="true" class="card-body no-outline">lorem ipsum dolor sit amet blah blah blaha</p>
+        </section>
+        <section class="card-bottom flex">
+          <img src="images/upvote.svg" class="card-bottom-icon card-bottom-icon-upvote">
+          <p>Quality: <span class="card-bottom-quality" value ="0">whatevs</span></p>
+          <img src="images/downvote.svg" class="card-bottom-icon card-bottom-icon-downvote">
+        </section>
+      </article>
+    </template>
+  </main>
+  <script type="text/javascript" src="idea.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

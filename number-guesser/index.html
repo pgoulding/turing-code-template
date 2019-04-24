@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Number Guesser Doubles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="animated slideInDown">NUMBER<span>GUESSER</span></h1>
+      <p class="tagline animated slideInDown"><sup>________</sup> ULTIMATE CHALLENGER EDITION <sup>________</sup></p>
+    </header>
+    <main>
+      <article>
+      	<form id="form-range">
+      		<h3>Set Range</h3>
+          <div class="range-flex">
+            <div class="input-range-wrapper">
+              <label for="input-minrange">Min Range</label>
+              <input type="text" name="" class="input-range" type="text" minlength="1" maxlength="3" id="input-minrange">
+              <label class="hidden-error" id="range-error-min"><img src="./error-icon.svg">Enter a Valid Range</label> 
+            </div>
+            <div class="input-range-wrapper">
+              <label for="input-maxrange">Max Range</label>
+              <input type="text" name="" class="input-range" minlength="1" maxlength="3" id="input-maxrange">
+              <label class="hidden-error" id="range-error-max"><img src="./error-icon.svg">Enter a Valid Range</label> 
+            </div>
+            <button id="btn-update">Update</button>
+          </div>
+        </form>
+        <form id="form-challenger">
+          <p>The Current Range is <span id="range-min"> 1</span> to <span id="range-max"> 100</span></p>
+          <h3>Challenger 1</h3>
+          <div class="form-challenger-input-wrapper">
+            <div class="name-input-wrapper">
+              <label for="input-name-challenger1">Name</label>
+              <input type="text" name="" class="name-input-challengers" id="input-name-challenger1">
+              <label class="hidden-error" id="name-error-1"><img src="./error-icon.svg"> Enter a Name</label>
+            </div>
+            <div class="guess-input-wrapper">
+              <label for="input-guess-challenger1">Guess</label>
+              <input type="text" name="" class="guesses-challenger" minlength="1" maxlength="3" id="input-guess-challenger1">
+              <label class="hidden-error" id="guess-error-1"><img src="./error-icon.svg"> Enter a valid Number</label> 
+            </div>
+          </div>
+          <h3>Challenger 2</h3>
+          <div class="form-challenger-input-wrapper">
+            <div class="name-input-wrapper">  
+              <label for="input-name-challenger2">Name</label>
+              <input type="text" name="" class="name-input-challengers" id="input-name-challenger2">
+              <label class="hidden-error" id="name-error-2"><img src="./error-icon.svg"> Enter a Name</label>
+            </div>
+            <div class="guess-input-wrapper">
+              <label for="input-guess-challenger2">Guess</label>
+              <input type="text" name="" class="guesses-challenger" minlength="1" maxlength="3" id="input-guess-challenger2">
+              <label class="hidden-error" id="guess-error-2"><img src="./error-icon.svg"> Enter a valid Number</label> 
+            </div>
+          </div>
+          <div class="btn-wrapper">  
+            <button class="btn-game" id="btn-submit" disabled>Submit Guess</button>
+            <button class="btn-game" id="btn-reset" disabled>Reset Game</button>
+            <button class="btn-game" id="btn-clear" disabled>Clear Game</button>
+          </div>  
+        </form>
+        <section class="latest-score">
+          <h3>Latest Score</h3>
+          <div class="guesses-challenger-flex">
+            <div class="latest-guess-challenger1">
+              <h4 id="name-output-challenger1">Challenger 1 Name</h4>
+              <p class="guess-current-style">current guess</p>
+              <p id="guess-output-challenger1" class="animated rubberBand"> -- </p>
+              <p id="guess-output-high-low1"> that's too low </p>
+            </div>
+            <div class="middle-line">
+            </div>
+            <div class="latest-guess-challenger2">
+              <h4 id="name-output-challenger2">Challenger 2 Name</h4>
+              <p class="guess-current-style">current guess</p>
+              <p id="guess-output-challenger2" class="animated rubberBand"> -- </p>
+              <p id="guess-output-high-low2"> that's too high</p>
+            </div>
+          </div>
+        </section>
+      </article>
+      <aside>
+      </aside>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

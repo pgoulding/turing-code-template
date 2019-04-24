@@ -1,0 +1,289 @@
+/*---------- Body ------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  font-family: 'Open Sans', sans-serif;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 50px 1fr;
+  height: 100vh;
+}
+
+label{
+  display: block;
+}
+
+p{
+  margin:0;
+  display: inline-block;
+}
+
+img{
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.visible {
+  display: block;
+}  
+
+.hidden {
+  display: none;
+}
+
+.card__task-ico {
+  margin-right:10px;
+  width: 20px;
+}
+
+button:hover {
+  background-color: red;
+}
+
+button:disbaled{
+  background-color: #3a3a58;
+} 
+
+/*---------- Header ----------------*/
+
+header {
+  align-items: center;
+  background-color: #1f1f3d;
+  grid-column: 1/ span 2;
+  grid-row: 1; 
+  justify-content: space-between;
+  padding:0 10px;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+span {
+  color: #ffc30c;
+}
+/* .header__input-searchbar {
+  width: 200px;
+}
+
+.header__input-searchbar:focus {
+  width: 500px;
+} */
+
+header .form__input{
+  padding-left: 5px;
+  border: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-right: 10px;
+}
+
+.btn__icon-search{
+  height: 40px;
+  padding: 5px 0;
+  background-color:rgb(189, 201, 208);
+  margin: 10px 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/*---------- Aside -----------------*/
+
+aside {
+  background-color: #587a8b;
+  border-right: solid 2px #314955;
+  grid-column: 1;
+}
+
+form {
+  align-content: flex-start;
+  color: #ffffff;
+  flex-direction: column;
+  padding: 10px;
+}
+
+aside button {
+  background-color: #1f1f3d;
+  border: 0;
+  color: #ffffff;
+  outline: none;
+}
+
+ul{
+  margin:0;
+}
+
+li{
+  list-style-type: none;
+  padding: 5px 0;
+}
+
+li:hover{
+  font-weight: 700;
+}
+
+p:focus{
+  font-weight: 400;
+}
+
+.form__input {
+  border-radius: 3px;
+  border: 2px solid #1f1f3d;
+  height: 40px;
+  margin: 10px 0;
+  padding-left: 5px;
+}
+
+.form__input-task{
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  width: 90%;
+}
+
+.form__checkbox-task {
+  margin: 10px 0;
+}
+
+.form__task-container{
+  padding: 20px;
+}
+
+.form__task-icon{
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  font-size: 2em;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.form__container-filter{
+  border-top: solid 2px #436374;
+}
+
+.error{
+  border: 3px solid red;
+}
+
+/*---------- Main ------------------*/
+
+main {
+  background-color: #f4f7f8;
+}
+
+.masonry-layout{
+  column-width: 13em;
+  padding-right: 20px;
+}
+
+.no-ideas{
+  border: none;
+  margin-top:100px;
+  text-align: center;
+}
+
+/*---------- Article ---------------*/
+
+article {
+  display: inline-block;
+  margin:  0.25rem;
+  width:  100%; 
+  color: #1f1f3d;
+}
+
+h3 {
+  border-bottom: 1px solid #C7D3D8;
+  margin: 0;
+  padding: 10px;
+}
+
+.card__task-container {
+  background-color: #fafdff;
+  border: 1px solid #C7D3D8;
+  flex-direction: column;
+  justify-content: space-between;
+  margin:10px;
+}
+
+.card__task-checkbox{
+  font-style: normal;
+  padding: 10px;
+}
+
+.card__task-checked{
+  font-style: italic;
+  color: #3c6577;
+  padding: 10px;
+}
+
+.card__task-modify {
+ border-top: 1px solid #C7D3D8;
+ justify-content: space-between;
+ padding-top: 5px;
+}
+
+.bottom__task-icon{
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  color: #3c6577;
+}
+
+.task-checkbox{
+  vertical-align: middle;
+}
+
+.card__task-urgent,
+.card__task-delete{
+  margin: auto;
+}
+
+.urgent-card{
+  background-color: #ffe89d;
+  border: 1px solid #ffc30c;
+}
+
+.urgent-card .card__task-modify{
+  border-top: 1px solid #ffc30c;
+}
+
+.urgent-card h3{
+  border-bottom: 1px solid #ffc30c;
+}
+.urgent-card .bottom__container-urgent{
+  color: #b23a25;
+}
+/*---------- Media Queries ---------*/
+
+@media screen and (max-width: 523px){
+  body {
+  display: flex;
+  flex-direction: column;
+  }
+
+  header{
+    flex-direction: column;
+  }
+
+  .search-container{
+  width: 100%;
+  }
+
+  .form__input-task{
+    width:95%;
+  }
+
+  header .form__input{
+    margin: 10px 2px 10px 0;
+    width: 100%;
+  }
+
+  button:hover {
+  background-color: #1f1f3d;
+  }
+
+}
